@@ -18,11 +18,13 @@ export const globalStyles = StyleSheet.create({
   // in den jeweiligen .tsx Files :)
 
   text: {
+    alignSelf: "center",
     color: "#fff",
     fontSize: 16,
   },
 
   headerText: {
+    alignSelf: "center",
     color: "#fff",
     fontWeight: "bold",
     fontSize: 20,

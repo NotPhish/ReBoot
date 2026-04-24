@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { globalStyles } from "@/styles/global";
 import StatusContainer from "@/container/statusContainer";
 
