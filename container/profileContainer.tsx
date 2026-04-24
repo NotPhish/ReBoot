@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { Image } from "expo-image";
 import { globalStyles } from "@/styles/global";
 
-// Make it pull the pfp uploaded by the user from
+// ToDo: Make it pull the pfp uploaded by the user from
 // (for now) local storage (NO cloud **yet**)
 
 const PlaceholderProfilePicture = require("@/assets/images/dummy-pfp.png");
@@ -33,7 +33,6 @@ const style = StyleSheet.create({
     paddingBottom: "3%",
     paddingRight: "5%",
     alignContent: "center",
-    // flexDirection: "row",
   },
 
   profilePictureContainer: {
