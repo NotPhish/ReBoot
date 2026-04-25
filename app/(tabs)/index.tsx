@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <View style={globalStyles.container}>
       <StatusContainer></StatusContainer>
-      <Counter></Counter>
+      <Counter isRunning={false} numberOfStarts={0}></Counter>
     </View>
   );
 }
