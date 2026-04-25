@@ -1,4 +1,5 @@
 import { View } from "react-native";
+import { useState } from "react";
 import { globalStyles } from "@/styles/global";
 import StatusContainer from "@/container/statusContainer";
 import Counter from "@/container/counter";
@@ -7,10 +8,15 @@ import Counter from "@/container/counter";
 //       InfoContainer fertig
 
 export default function Index() {
+  const [timerAcitve, setTimerActive] = useState(false);
+
   return (
     <View style={globalStyles.container}>
       <StatusContainer></StatusContainer>
-      <Counter isRunning={false} numberOfStarts={0}></Counter>
+      <Counter
+        timerAcitve={timerAcitve}
+        onToggle={() => setTimerActive((prev) => !prev)}
+      ></Counter>
     </View>
   );
 }

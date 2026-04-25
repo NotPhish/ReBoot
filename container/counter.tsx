@@ -1,22 +1,15 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
-import TimerLogic from "@/backend/functions/timerLogic";
 
 type Props = {
-  isRunning: boolean;
-  numberOfStarts: number;
+  timerAcitve: boolean;
+  onToggle: () => void;
 };
 
-export default function Counter({ isRunning, numberOfStarts }: Props) {
-  numberOfStarts = 0;
-  isRunning = false;
-
-  if (isRunning === false && numberOfStarts === 0) {
-    numberOfStarts++;
-    isRunning = true;
-
+export default function Counter({ timerAcitve, onToggle }: Props) {
+  if (timerAcitve === false) {
     return (
       <View style={style.container}>
-        <Pressable style={style.buttonStart} onPress={() => (isRunning = true)}>
+        <Pressable style={style.buttonStart} onPress={onToggle}>
           <Text style={style.buttonDescText}>Start Timer</Text>
         </Pressable>
       </View>
@@ -24,7 +17,7 @@ export default function Counter({ isRunning, numberOfStarts }: Props) {
   } else {
     return (
       <View style={style.container}>
-        <Pressable style={style.buttonStop} onPress={() => (isRunning = false)}>
+        <Pressable style={style.buttonStop} onPress={onToggle}>
           <Text style={style.buttonDescText}>Stop Timer</Text>
         </Pressable>
       </View>
