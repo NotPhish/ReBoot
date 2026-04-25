@@ -9,9 +9,10 @@ export const globalStyles = StyleSheet.create({
 
   container: {
     flex: 1,
+    flexDirection: "column",
     backgroundColor: "#101010",
     alignItems: "center",
-    justifyContent: "flex-start",
+    // justifyContent: "flex-start",
   },
 
   // Standard Text Farbe, die Panel spezifischen sind dann

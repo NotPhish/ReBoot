@@ -19,5 +19,6 @@ const style = StyleSheet.create({
     paddingTop: "3%",
     paddingBottom: "3%",
     paddingRight: "5%",
+    marginBottom: 10,
   },
 });
